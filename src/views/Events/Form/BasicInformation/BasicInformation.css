@@ -1,0 +1,36 @@
+#courseDescription{
+    /* height: 160px; */
+}
+.ql-blank{
+    height: 120px!important;
+}
+.day-btn{
+    background-color: rgba(91, 89, 89, 0.173);
+}
+.card-header{
+    background-color: white;
+}
+.header-title{
+    display: flex;
+    align-items: center;
+}
+.event-form-page-btn{
+    display: inline-block;
+    width: 25%;
+}
+/* .events-form-pages{
+    margin-bottom: 10px;
+    border-bottom:1px solid rgba(111, 110, 110, 0.238);
+} */
+.event-form-page-btn{
+    text-align: center;
+
+}
+.event-form-page-btn a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+.save-preview{
+    float: right;
+    margin-right: 10px;
+}

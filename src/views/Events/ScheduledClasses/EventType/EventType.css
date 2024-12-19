@@ -1,0 +1,26 @@
+.event-title-name{
+    display: flex;
+    align-items: center;
+}
+.event-title-name h5{
+    margin: 0;
+}
+.events-img {
+    height: 35px;
+    margin-right: 25px;
+}
+.event-input{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(187, 186, 186);
+    padding: 50px 10px;
+    border-radius: 10px;
+}
+.event-radio{
+    margin: 0;
+    margin-right: 20px;
+}
+.submit-btn{
+    float: right;
+    margin: 10px;
+}

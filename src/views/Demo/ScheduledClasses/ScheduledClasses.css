@@ -1,0 +1,77 @@
+.scheduled-classes-body{
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.schedule-classes{
+    border:0.5px solid black;
+    padding: 8px;
+    border-radius: 10px;
+}
+.btn-details{
+    background-color: rgb(4, 4, 47);
+    width: 100%;
+}
+.class-status{
+    display: flex;
+    color: black;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+#timelineSection{
+    padding: 0;
+    display: inline;
+}
+.timeline-btn{
+    display: flex;
+    font-size: 0.65em;
+    list-style: none;
+    margin: 5px 0;    
+}
+.pagination-controls{
+    margin-top:15px;
+}
+.scheduled-date li{
+    list-style: none;
+}
+.event-title h5{
+  font-size: 1em;
+} 
+.add-events{
+    float: right;
+}
+.btn-live{
+    background-color: rgb(141, 255, 47);
+}
+.btn-webinar{
+    background-color: rgb(255 204 47);;
+
+}
+.timeline-icon{
+    margin-right: 4px!important; /* Space between icon and text */
+    font-size: 1.5em; /* Adjust the icon size */
+    color: inherit; /* Matches the text color */
+    color: rgb(11, 53, 115);
+
+}
+.timeline-section{
+    display: inline;
+    text-align: center;
+}
+.sheduled-date ul {
+    display: flex;
+}
+.sheduled-date ul li{
+    list-style: none;
+}
+.events-timeline{
+    margin: 15px 0;
+}
+.class-category-body{
+    display: flex;
+}
+.class-category-body li{
+    list-style: none;
+    padding: 10px;
+}

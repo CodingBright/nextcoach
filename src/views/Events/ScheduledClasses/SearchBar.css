@@ -1,0 +1,11 @@
+.events-search{
+    display: flex;
+    justify-content: right;
+}
+#search{
+    border: none;
+    background-color: rgba(187, 184, 184, 0.26);
+    padding: 5px;
+    width: 50%;
+    border-radius: 5px;
+}

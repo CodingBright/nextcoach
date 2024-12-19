@@ -1,0 +1,66 @@
+#courseDescription{
+    /* height: 160px; */
+}
+.ql-blank{
+    height: 120px!important;
+}
+.day-btn{
+    background-color: rgba(91, 89, 89, 0.173);
+}
+.card-header{
+    background-color: white;
+}
+.header-title{
+    display: flex;
+    align-items: center;
+}
+.event-form-page-btn{
+    display: inline-block;
+    width: 25%;
+}
+.input-file{
+    display: flex;
+    /* align-items: center; */
+}
+#imageFile{
+    display: hidden;
+}
+.hidden-input {
+    display: none; /* Hide the input field */
+  }
+  .upload-image-file{
+    margin-left: 10px;
+  }
+  .custom-upload-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff4c;
+    color: rgb(6, 66, 244);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .custom-upload-label:hover {
+    background-color: #284f78;
+    color: white;
+  }
+  
+.event-form-page-btn{
+    text-align: center;
+
+}
+.add-modules{
+    width: 100%;
+}
+.event-form-page-btn a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+.save-preview{
+    float: right;
+    margin-right: 10px;
+}
+.text-end{
+  float: right;
+}
