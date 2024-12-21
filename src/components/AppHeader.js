@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect, useRef, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   CContainer,
@@ -12,28 +11,20 @@ import {
   CHeaderToggler,
   CNavLink,
   CNavItem,
-  useColorModes,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import {
-  cilBell,
-  cilContrast,
-  cilEnvelopeOpen,
-  cilList,
-  cilMenu,
-  cilMoon,
-  cilSun,
-} from '@coreui/icons'
+import { cilBell, cilMenu } from '@coreui/icons'
 
 import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 
 const AppHeader = () => {
   const headerRef = useRef()
-  const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
-
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.sidebarShow)
+
+  // Manage language state
+  const [language, setLanguage] = useState('en')
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
@@ -43,7 +34,7 @@ const AppHeader = () => {
   }, [])
 
   return (
-    <CHeader position="sticky" className="mb-4 p-0" ref={headerRef}>
+    <CHeader className="mb-4 p-0" ref={headerRef}>
       <CContainer className="border-bottom px-4" fluid>
         <CHeaderToggler
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
@@ -51,77 +42,50 @@ const AppHeader = () => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <CHeaderNav className="d-none d-md-flex">
-          {/* <CNavItem>
-            <CNavLink to="/dashboard" as={NavLink}>
-              Dashboard
-            </CNavLink>
-          </CNavItem>
+        <CHeaderNav className="d-none d-md-flex"></CHeaderNav>
+        <CHeaderNav className="search-profile">
           <CNavItem>
-            <CNavLink href="#">Users</CNavLink>
+            <input type="text" placeholder="Search" className="top-search" />
           </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">Settings</CNavLink>
-          </CNavItem> */}
-        </CHeaderNav>
-        <CHeaderNav className="ms-auto">
           <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilBell} size="lg" />
             </CNavLink>
           </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilList} size="lg" />
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilEnvelopeOpen} size="lg" />
-            </CNavLink>
-          </CNavItem>
-        </CHeaderNav>
-        <CHeaderNav>
           <li className="nav-item py-1">
             <div className="vr h-100 mx-2 text-body text-opacity-75"></div>
           </li>
           <CDropdown variant="nav-item" placement="bottom-end">
             <CDropdownToggle caret={false}>
-              {colorMode === 'dark' ? (
-                <CIcon icon={cilMoon} size="lg" />
-              ) : colorMode === 'auto' ? (
-                <CIcon icon={cilContrast} size="lg" />
-              ) : (
-                <CIcon icon={cilSun} size="lg" />
-              )}
+              {language.toUpperCase()}
             </CDropdownToggle>
             <CDropdownMenu>
               <CDropdownItem
-                active={colorMode === 'light'}
+                active={language === 'en'}
                 className="d-flex align-items-center"
                 as="button"
                 type="button"
-                onClick={() => setColorMode('light')}
+                onClick={() => setLanguage('en')}
               >
-                <CIcon className="me-2" icon={cilSun} size="lg" /> Light
+                English
               </CDropdownItem>
               <CDropdownItem
-                active={colorMode === 'dark'}
+                active={language === 'es'}
                 className="d-flex align-items-center"
                 as="button"
                 type="button"
-                onClick={() => setColorMode('dark')}
+                onClick={() => setLanguage('es')}
               >
-                <CIcon className="me-2" icon={cilMoon} size="lg" /> Dark
+                Español
               </CDropdownItem>
               <CDropdownItem
-                active={colorMode === 'auto'}
+                active={language === 'fr'}
                 className="d-flex align-items-center"
                 as="button"
                 type="button"
-                onClick={() => setColorMode('auto')}
+                onClick={() => setLanguage('fr')}
               >
-                <CIcon className="me-2" icon={cilContrast} size="lg" /> Auto
+                Français
               </CDropdownItem>
             </CDropdownMenu>
           </CDropdown>

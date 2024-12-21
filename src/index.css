@@ -1,0 +1,20 @@
+.header{
+    background-color: rgba(245, 245, 220, 0.049)!important;
+    border-bottom: 1px;
+}
+.search-profile{
+    background-color: white;
+    -webkit-box-shadow: 6px 3px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 3px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 3px 15px 0px rgba(0,0,0,0.75);
+padding: 4px 25px;
+border-radius: 25px;
+}
+.top-search{
+    margin-top: 3px;
+    outline: none;
+    border: none;
+    background-color: rgba(53, 52, 52, 0.312);
+    padding: 5px 20px;
+    border-radius: 25px;
+}
